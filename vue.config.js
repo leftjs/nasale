@@ -1,3 +1,3 @@
 module.exports = {
-  baseUrl: "https://github.com/leftjs/nasale"
+  baseUrl: "https://leftjs.github.io/nasale"
 };
