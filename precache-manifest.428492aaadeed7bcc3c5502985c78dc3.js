@@ -4,11 +4,11 @@ self.__precacheManifest = [
     "url": "https://leftjs.github.io/nasale/js/chunk-vendors.a1fd7748.js"
   },
   {
-    "revision": "372c5c51494002454d4e",
-    "url": "https://leftjs.github.io/nasale/js/app.372c5c51.js"
+    "revision": "4ad9da2d521e5d2b1c86",
+    "url": "https://leftjs.github.io/nasale/js/app.4ad9da2d.js"
   },
   {
-    "revision": "93c331986c8b38c1989cfdd73c81541e",
+    "revision": "74ed0ae7f4f95bf2a08801f0a0e4d5b2",
     "url": "https://leftjs.github.io/nasale/index.html"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "https://leftjs.github.io/nasale/css/chunk-vendors.a6b05d04.css"
   },
   {
-    "revision": "372c5c51494002454d4e",
-    "url": "https://leftjs.github.io/nasale/css/app.5b1c71e2.css"
+    "revision": "4ad9da2d521e5d2b1c86",
+    "url": "https://leftjs.github.io/nasale/css/app.19e11bbf.css"
   }
 ];
