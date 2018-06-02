@@ -7,16 +7,16 @@ export default class NebPay {
    * @param {*} net main | test(default)
    */
   constructor() {
-    // this.callbackUrl = NP.config.mainnetUrl;
+    this.callbackUrl = NP.config.mainnetUrl;
 
-    this.callbackUrl = NP.config.testnetUrl;
+    // this.callbackUrl = NP.config.testnetUrl;
 
     this.nebpay = new NP();
   }
 
   static checkState(txhash, success, failure) {
-    // const url = "https://mainnet.nebulas.io/v1/user/getTransactionReceipt";
-    const url = "https://testnet.nebulas.io/v1/user/getTransactionReceipt";
+    const url = "https://mainnet.nebulas.io/v1/user/getTransactionReceipt";
+    // const url = "https://testnet.nebulas.io/v1/user/getTransactionReceipt";
     function sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
     }
