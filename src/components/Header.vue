@@ -5,16 +5,16 @@
         <img class="logo" :src="logo" alt="">
         <el-menu :default-active="currentMenu" class="menu" mode="horizontal" :router="true">
           <el-menu-item index="/">
-            全部项目
+            全部
           </el-menu-item>
           <el-menu-item index="/issue">
-            发布项目
+            发布
           </el-menu-item>
           <el-menu-item index="/wallet">
-            查看资产
+            资产
           </el-menu-item>
           <el-menu-item index="/me">
-            关于作者
+            关于
           </el-menu-item>
         </el-menu>
       </div>

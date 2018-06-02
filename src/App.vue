@@ -36,10 +36,12 @@ body,
   z-index: 100;
   position: fixed;
   width: 100%;
+  // min-width: 1280px;
   box-shadow: 0 0 5px 0 #cccccc;
   background: white;
 }
 .rv {
-  padding-top: 100px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 </style>
