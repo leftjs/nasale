@@ -70,7 +70,7 @@
 
 <script>
 import axios from "axios";
-import { postToken } from "@/firebase";
+import { postToken, buyToken } from "@/firebase";
 import NebPay from "@/nebpay";
 import fs from "fs";
 import BigNumber from "bignumber.js";
@@ -166,6 +166,7 @@ export default {
                     owner: this.currentAccount,
                     createdAt: result.timestamp
                   });
+                  buyToken(this.$store.state.account, txhash.contract_address);
                   this.$message.success("代币创建成功");
                   this.tokenData = {};
                   loading.close();
