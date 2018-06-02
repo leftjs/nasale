@@ -13,6 +13,9 @@
           <el-menu-item index="/wallet">
             查看资产
           </el-menu-item>
+          <el-menu-item index="/me">
+            关于作者
+          </el-menu-item>
         </el-menu>
       </div>
       <div>

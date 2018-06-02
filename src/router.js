@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Issue from "./views/Issue.vue";
 import Wallet from "./views/Wallet.vue";
+import Me from "./views/Me.vue";
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: "/wallet",
       name: "wallet",
       component: Wallet
+    },
+    {
+      path: "/me",
+      name: "me",
+      component: Me
     }
   ]
 });
