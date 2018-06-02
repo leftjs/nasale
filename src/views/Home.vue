@@ -258,8 +258,8 @@ export default {
   margin: 0 auto;
   &:after {
     content: "";
-    flex: auto;
     width: 300px;
+    margin: 20px;
   }
   .token {
     margin: 20px;
