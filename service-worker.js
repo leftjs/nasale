@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 importScripts(
-  "https://leftjs.github.io/nasale/precache-manifest.aec957128aa578c5f18a99d0a0a10c3a.js"
+  "https://leftjs.github.io/nasale/precache-manifest.adf125f37590cd5e7aec863497882237.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "nasale"});
