@@ -5,9 +5,21 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "dev-build": "vue-cli-service build --mode development",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "bignumber.js": "^7.2.1",
+    "dayjs": "^1.6.5",
+    "element-ui": "^2.4.0",
+    "firebase": "^5.0.4",
+    "lodash": "^4.17.10",
+    "micro": "^9.3.2",
+    "moment": "^2.22.2",
+    "nebpay.js": "^0.1.0",
+    "normalize.css": "^8.0.0",
+    "qiniu-js": "^2.2.2",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
@@ -28,10 +40,7 @@
     "env": {
       "node": true
     },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier"
-    ],
+    "extends": ["plugin:vue/essential", "@vue/prettier"],
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
@@ -42,9 +51,5 @@
       "autoprefixer": {}
     }
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }
