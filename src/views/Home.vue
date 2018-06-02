@@ -1,38 +1,44 @@
 <template>
-  <div class="home">
+  <div>
+    <div class="home">
+      <Project class="token" :token="token" v-for="token in tokens" :key="token.id" @buy="buy" />
+      <el-dialog :title="currentBuyToken.title" :visible.sync="dialogVisible" width="50%" name="test">
+        <img :src="currentBuyToken.logo" alt="">
+        <p>{{currentBuyToken.name}} / {{currentBuyToken.symbol}}</p>
+        <p>项目简介: {{currentBuyToken.desc}}</p>
+        <p>项目官网:
+          <a :href="currentBuyToken.url" target="__blank">{{currentBuyToken.url}}</a>
+        </p>
+        <p>众筹时间: {{currentBuyToken.openingTime}} ~ {{currentBuyToken.endingTime}}</p>
+        <p>发行总量: {{currentBuyToken.totalSupply}}万 {{currentBuyToken.symbol}}</p>
+        <p>众筹总量: {{currentBuyToken.cap}}万 {{currentBuyToken.symbol}}</p>
+        <p>已筹数量: {{currentBuyToken.tokenRasised}}万 {{currentBuyToken.symbol}}</p>
+        <p class="line"></p>
+        <p>
+          <el-form :model="buyInfo" label-width="100px" :rules="buyRules">
+            <el-form-item label="购买数量" prop="amount">
+              <el-input v-model.number="buyInfo.amount" type="number" auto-complete="off" placeholder="eg: 1">
+                <template slot="append">{{currentBuyToken.symbol}}</template>
+              </el-input>
+            </el-form-item>
+            <el-form-item label="收款地址" prop="address">
+              <el-input v-model="buyInfo.address" placeholder="eg: n1TPjVhcMgoZ5h625GC6ba53WF2VZznsUbZ"></el-input>
+            </el-form-item>
 
-    <Project class="token" :token="token" v-for="token in tokens" :key="token.id" @buy="buy" />
-    <el-dialog :title="currentBuyToken.title" :visible.sync="dialogVisible" width="50%" name="test">
-      <img :src="currentBuyToken.logo" alt="">
-      <p>{{currentBuyToken.name}} / {{currentBuyToken.symbol}}</p>
-      <p>项目简介: {{currentBuyToken.desc}}</p>
-      <p>项目官网:
-        <a :href="currentBuyToken.url" target="__blank">{{currentBuyToken.url}}</a>
-      </p>
-      <p>众筹时间: {{currentBuyToken.openingTime}} ~ {{currentBuyToken.endingTime}}</p>
-      <p>发行总量: {{currentBuyToken.totalSupply}}万 {{currentBuyToken.symbol}}</p>
-      <p>众筹总量: {{currentBuyToken.cap}}万 {{currentBuyToken.symbol}}</p>
-      <p>已筹数量: {{currentBuyToken.tokenRasised}}万 {{currentBuyToken.symbol}}</p>
-      <p class="line"></p>
-      <p>
-        <el-form :model="buyInfo" label-width="100px" :rules="buyRules">
-          <el-form-item label="购买数量" prop="amount">
-            <el-input v-model.number="buyInfo.amount" type="number" auto-complete="off" placeholder="eg: 1">
-              <template slot="append">{{currentBuyToken.symbol}}</template>
-            </el-input>
-          </el-form-item>
-          <el-form-item label="收款地址" prop="address">
-            <el-input v-model="buyInfo.address" placeholder="eg: n1TPjVhcMgoZ5h625GC6ba53WF2VZznsUbZ"></el-input>
-          </el-form-item>
+          </el-form>
+        </p>
+        <span slot="footer" class="dialog-footer">
+          <el-button @click="dialogVisible = false">取 消</el-button>
+          <el-button type="primary" @click="buySubmit">确 定</el-button>
+        </span>
+      </el-dialog>
+    </div>
+    <p style="color: red;">tip: 部分数据使用
+      <a href="https://firebase.google.com/" target="__blank">firebase</a>，部分微服务使用
+      <a href="https://zeit.co/now" target="__blank">now</a> 国内用户请使用科学方法</p>
 
-        </el-form>
-      </p>
-      <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogVisible = false">取 消</el-button>
-        <el-button type="primary" @click="buySubmit">确 定</el-button>
-      </span>
-    </el-dialog>
   </div>
+
 </template>
 
 <script>
