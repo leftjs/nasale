@@ -35,7 +35,8 @@
     </div>
     <p style="color: red;">tip: 部分数据使用
       <a href="https://firebase.google.com/" target="__blank">firebase</a>，部分微服务使用
-      <a href="https://zeit.co/now" target="__blank">now</a> 国内用户请使用科学方法</p>
+      <a href="https://zeit.co/now" target="__blank">now</a> ，国内用户请使用科学方法</p>
+    <p>tip: 默认调起浏览器钱包插件支付，请先安装钱包插件</p>
 
   </div>
 
@@ -233,7 +234,7 @@ export default {
         })
         .catch(err => {
           console.error(err);
-          this.$message.error("NAS网络拥堵...");
+          this.$message.error("请检查是否是主网钱包，或者NAS网络拥堵...");
         });
     }
   },
